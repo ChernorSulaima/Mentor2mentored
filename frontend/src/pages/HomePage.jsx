@@ -50,9 +50,9 @@ const HomePage = () => {
       {/* FRIENDS SECTION */}
        <section>
         <div className='mb-6'>
-          <h3>Learning Partners</h3>
+          <h3>My Mentors & Mentees</h3>
           <p className="para">
-            Connect and practice skills with your learning partners
+            Connect, collaborate, and grow with your mentors and peers across Sierra Leone
           </p>
         </div>
         {loadingFriends ? (
@@ -73,9 +73,9 @@ const HomePage = () => {
       {/* Recommended Connections SECTION */}
        <section>
         <div className='mb-6'>
-          <h3>Expand Your Network</h3>
+          <h3>Discover Mentors & Peers in Sierra Leone</h3>
           <p className="para">
-            Meet new learners ready to exchange skills and practice together
+            Find inspiring female mentors and young women ready to share guidance and knowledge
           </p>
         </div>
         {loadingUsers ? (

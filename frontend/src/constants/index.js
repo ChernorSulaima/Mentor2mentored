@@ -1,32 +1,26 @@
 export const SKILLS = [
-  "Web Development",
-  "App Development",
-  "UI / UX Design",
-  "Graphic Design",
-  "SEO & Digital Marketing",
-  "Data Science",
-  "Artificial Intelligence",
-  "Cyber Security",
-  "Cloud Computing",
-  "DevOps",
+  "STEM & Coding",
+  "Career & Professional Growth",
+  "Leadership & Public Speaking",
+  "Entrepreneurship & Business",
+  "Academic Excellence & Tutoring",
+  "Digital Literacy & IT",
+  "Health & Wellbeing",
+  "Creative Arts & Media",
+  "Financial Literacy",
+  "Community Impact & Advocacy",
 ];
 
 export const LANGUAGES = [
   "English",
-  "Spanish",
+  "Krio",
+  "Mende",
+  "Temne",
+  "Fullah",
+  "Limba",
+  "Kono",
   "French",
-  "German",
   "Arabic",
-  "Hindi",
-  "Urdu",
-  "Portuguese",
-  "Russian",
-  "Chinese",
-  "Japanese",
-  "Korean",
-  "Turkish",
-  "Italian",
-  "Bengali",
 ];
 
 export const THEMES = [
@@ -68,11 +62,17 @@ export const THEMES = [
 ];
 
 export const LANGUAGE_TO_FLAG = {
-  english: "gb",
-  spanish: "es",
+  english: "sl",
+  krio: "sl",
+  mende: "sl",
+  temne: "sl",
+  fullah: "sl",
+  limba: "sl",
+  kono: "sl",
   french: "fr",
-  german: "de",
   arabic: "sa",
+  spanish: "es",
+  german: "de",
   hindi: "in",
   urdu: "pk",
   portuguese: "pt",
@@ -84,3 +84,4 @@ export const LANGUAGE_TO_FLAG = {
   italian: "it",
   bengali: "bd",
 };
+

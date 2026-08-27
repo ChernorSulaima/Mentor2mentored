@@ -108,15 +108,14 @@ export const logout = (req, res) => {
 export const onboard = async (req, res) => {
   try {
     const userId = req.user._id;
-    const { fullName, bio, skill, language, location } = req.body;
-    if (!fullName || !bio || !skill || !language || !location) {
+    const { fullName, bio = "", skill, language, location, image } = req.body;
+    if (!fullName || !skill || !language || !location) {
       return res
         .status(400)
         .json({
-          message: "All fields are required for onboarding.",
+          message: "Please fill in your name, location, language, and mentorship focus area.",
           missingFields: [
             !fullName && "fullName",
-            !bio && "bio",
             !skill && "skill",
             !language && "language",
             !location && "location",
@@ -127,7 +126,12 @@ export const onboard = async (req, res) => {
     const updatedUser = await User.findByIdAndUpdate(
       userId,
       {
-        ...req.body,
+        fullName,
+        bio: bio.trim() || "Passionate about learning, empowerment, and mentorship in Sierra Leone.",
+        skill,
+        language,
+        location,
+        image: image || req.user.image || "",
         isOnboarded: true,
       },
       { new: true },
@@ -144,7 +148,6 @@ export const onboard = async (req, res) => {
         name: updatedUser.fullName,
         image: updatedUser.image || "",
       });
-      // console.log("USER DATA:", updatedUser);
       console.log(`Stream user updated for ${updatedUser.fullName}`);
     } catch (error) {
       console.log("Error updating stream user:", error);

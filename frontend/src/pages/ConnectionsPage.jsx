@@ -15,9 +15,9 @@ const ConnectionsPage = () => {
       {/* FRIENDS SECTION */}
        <section>
         <div className='mb-6'>
-          <h3>Learning Partners</h3>
+          <h3>My Mentorship Circle</h3>
           <p className="para">
-            Connect and practice skills with your learning partners
+            Stay in touch and collaborate with your connected mentors and mentees
           </p>
         </div>
         {loadingFriends ? (

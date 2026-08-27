@@ -35,7 +35,7 @@ const RequestsPage = () => {
               <section>
                  <h3 className="flexStart gap-2 mb-6">
                   <UserCheckIcon className="text-primary" />
-                  Connection Requests
+                  Mentorship Requests
                   <span className="badge badge-primary badge-xs relative bottom-2">{incomingRequests.length}</span>
                 </h3>
                 <div className='space-y-3 max-w-md'>
@@ -73,7 +73,7 @@ const RequestsPage = () => {
                             {request.sender.language}
                           </span>
                           <span className="badge badge-soft badge-success text-xs capitalize">
-                            <span className="hidden sm:block">Skill:</span>
+                            <span className="hidden sm:block">Focus:</span>
                             {request.sender.skill}
                           </span>
                         </div>

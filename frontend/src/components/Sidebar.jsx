@@ -16,7 +16,7 @@ const Sidebar = () => {
         },
         {
             path: "/connections",
-            label: "Connections",
+            label: "Mentorship Circle",
             icon: <LucideMails size={21} className='opacity-50'/>
         },
         {
@@ -29,10 +29,10 @@ const Sidebar = () => {
     return (
         <div className="flex min-h-full flex-col items-start bg-base-100 is-drawer-close:w-14 is-drawer-open:w-64 pt-3">
             {/* Logo */}
-            <Link to="/" className="flex gap-1 pl-3">
-                <img src="/logo.png" alt="" height={34} width={34} />
-                <span className="is-drawer-close:hidden text-3xl font-bold">
-                    <span>ingpong</span>
+            <Link to="/" className="flex items-center gap-2 pl-3">
+                <img src="/logo.png" alt="logo" height={32} width={32} />
+                <span className="is-drawer-close:hidden text-lg font-bold tracking-tight">
+                    Mentor 2 Mentored
                 </span>
             </Link>
             {/* Sidebar content here */}

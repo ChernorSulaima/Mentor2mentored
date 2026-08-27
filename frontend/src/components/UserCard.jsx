@@ -29,7 +29,7 @@ const UserCard = ({user, hasRequestBeenSent, sendRequestMutation, isPending}) =>
                   {hasRequestBeenSent ? (
                      <><CheckCircleIcon className="size-4" />Request Sent</>
                   ) : (
-                    <><UserPlusIcon className="size-4" />Conn Request</>
+                    <><UserPlusIcon className="size-4" />Connect</>
                   ) }
                 </button>
               ) : (
@@ -48,7 +48,7 @@ const UserCard = ({user, hasRequestBeenSent, sendRequestMutation, isPending}) =>
             {user.language}
           </span>
           <span className="badge badge-soft badge-success text-xs font-medium capitalize">
-            <span className="hidden sm:block">Skill:</span>
+            <span className="hidden sm:block">Focus:</span>
             {user.skill}
           </span>
         </div>

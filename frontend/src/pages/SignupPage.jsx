@@ -24,7 +24,7 @@ const SignupPage = () => {
           {/* LOGO */}
           <div className='flexCenter gap-1'>
             <img src="/logo.png" alt="logo" height={33} width={33} />
-            <h3 className='hidden sm:block'>ingpong</h3>
+            <h3 className='hidden sm:block text-lg font-bold'>Mentor 2 Mentored</h3>
           </div>
           {error && (
             <div className="alert alert-error mb-4">
@@ -34,7 +34,7 @@ const SignupPage = () => {
           {/* FORM */}
           <form onSubmit={handleSignup} className='mt-6'>
             <h2 className='card-title'>Get Started</h2>
-            <p className="para">Welcome to Pingpong. Please fill in the form below to create an account.</p>
+            <p className="para">Welcome to Mentor 2 Mentored. Create your account to connect with mentors and peers in Sierra Leone.</p>
             <div className="my-8">
               <fieldset className="fieldset">
                 <legend className="fieldset-legend">Full Name</legend>

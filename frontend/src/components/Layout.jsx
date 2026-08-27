@@ -30,7 +30,7 @@ const Layout = () => {
                     <div className="px-4">
                         <div className='flexEnd gap-3 ml-auto'>
                            <Link to={'/requests'} className='btn rounded-full'>
-                             Requests 
+                             Mentorship Requests 
                              <div className="badge badge-sm badge-info">{incomingRequests ? Number(incomingRequests.length) : "00"}</div>
                            </Link>
                            <ThemeSelector />
