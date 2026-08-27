@@ -14,9 +14,20 @@ const __dirname = path.resolve(); // Get the current directory path
 
 await connectDB(); // Establish a Connection to the database
 
+// Support comma-separated list of allowed origins (e.g. Vercel preview URLs)
+const allowedOrigins = process.env.CLIENT_URL
+  ? process.env.CLIENT_URL.split(',').map(o => o.trim())
+  : ['http://localhost:5173'];
+
 // Middleware Setup
 app.use(cors({
-  origin: process.env.CLIENT_URL, // Allow requests from the client URL
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true, // Allow cookies to be sent
 }))
 app.use(express.json()); // Parse JSON request bodies
